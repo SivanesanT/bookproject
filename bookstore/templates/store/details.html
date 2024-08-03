@@ -1,0 +1,48 @@
+
+{% extends 'store/layouts/main.html' %}
+
+{% block main %}
+
+<br><br><br>
+<div class="container">
+  {% include 'store/inc/message.html' %}
+</div>
+
+{% if data %}
+<h2 class="container card-title" style="color:blueviolet; padding-left:125px;">{{data.Book_name}}</h2>
+      <br><br>
+      <div class="row">
+        <div class="col-sm-6">
+        <center>
+          <img src="{{data.img.url}}" alt="" height="500px;" width="332px">
+          <br>
+<h3 class="container card-title" style="color:green;">Rs:-{{data.price}}/- Only</h3>
+</center>
+        </div>
+        <div class="col-sm-6" style="margin-top:25px">
+        
+
+          <br>
+          <h5 style="background-color: aquamarine; text-align: center;     padding: 10px;
+  border-radius: 10px;"> <p class="card-text">Aurthorname:{{data.Aurthor_name}}</p></h5>
+<br> 
+<h5>Book Discription:-</h5>
+<br>{{data.description }}
+        
+
+        </div>
+      </div>
+  <center><a href="{% url 'newshopcart' pk=data.id %}"><button class="btn btn-warning" style="margin: 20px; ">Shop to Cart</button></a></center>
+
+   {% comment %} <a href="adminfleatchbook.php?fleid=<?php echo $id; ?>"> <button class="btn btn-success" style="margin: 20px;">Fleatch a Book</button></a>
+
+   <a href="admintranstomain.php?tras=<?php echo $id;?>"  onclick="return confirm('Are you sure you want to transfer the Book into Main Library?');">  <button class="btn btn-info" style="margin: 20px;"> Transfer</button></a>
+
+   <a href="adminbookdelete.php?delid=<?php echo $id;?>"  onclick="return confirm('Are you sure you want to delete?');">  <button class="btn btn-danger" style="margin: 20px;"> Delete</button></a> {% endcomment %}
+
+    </div>
+
+
+{% endif %}
+
+{% endblock main %}

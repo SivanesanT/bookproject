@@ -1,0 +1,51 @@
+{% extends 'store/layouts/main.html' %}
+
+{% block main %}
+<br><br><br>
+<div class="container">
+    <!-- <center><h2 style="color:red;"> {{ msg }} </h2></center> -->
+    <h3>New Registeration</h3>
+    <br>
+    {% include 'store/inc/message.html' %}
+
+<hr>
+<div class="container">
+<form action=" {% url 'regi' %}" method="post" enctype="multipart/form-data" >
+    {% csrf_token %}
+    <div class="container">
+    
+    <div class="form-group">
+      <label for="bookname">Username:</label>
+      <input type="text" name="username" class="form-control" id="email" required>
+    </div>
+<br>
+    <div class="form-group">
+      <label for="aurthor">EmailID:</label>
+      <input type="email" name="email" class="form-control" id="pwd" required>
+    </div>
+<br>
+    <div class="form-group">
+        <label for="aurthor">Password:</label>
+        <input  type="password"  name="pass" class="form-control" id="pwd" required>
+    </div>
+    <br>
+    <div class="form-group">
+        <label for="aurthor">Confirm Password:</label>
+        <input  type="password" name="cpass" class="form-control" id="pwd" required>
+    </div>
+    <br>
+
+   <center> <button name="submit" type="submit" style="text-align: center;" class="btn btn-primary" onclick="return confirm('Are You Want to Register');">Submit</button></center>
+
+<br><br><br>
+
+
+</div>
+    </form>
+
+</div>
+
+</div>
+
+
+{% endblock main %}

@@ -1,0 +1,38 @@
+body{
+    font-family: 'Chonburi', cursive;
+}
+.slide{
+    margin-top: 60px;
+}
+.para{
+
+    height:400px;
+    background: url("../img/jewel2.jpg") no-repeat fixed center;
+    background-size: cover;
+    text-align: center;
+    padding: 175px;
+}
+.reviwe1{
+    text-align: center;
+    margin-top: 10px;
+}
+footer{
+    height: 200px;
+    background: lightslategray;
+    padding: 20px;
+    color: whitesmoke;
+}
+footer a{
+    color:whitesmoke;
+}
+/* .contact{
+    padding-left: 85%;
+} */
+.right{
+    float: right;
+}
+@media(max-width:541px){
+    .para h2{
+        font-size: 15px;
+    }
+}

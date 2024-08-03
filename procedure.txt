@@ -1,0 +1,25 @@
+Task;                                                                                                                                                                                              This website is used for online bookstore website where users can browse and purchase books.
+
+a.  The logo and menus are required in the header section ( home page, Book Details Page, Shopping Cart page). All of these things should be designed and must be functional.
+
+b.  Home page:
+ 
+Display a list of featured books on the homepage.Include images, titles, and small descriptions of each featured book.
+
+c.  Book Details Page:
+ 
+When a user clicks on a book, show detailed information about the book.Include options to add the book to the shopping cart.
+
+d.  Shopping Cart page:
+
+e.  Implement a shopping cart functionality"
+ 
+a. Allow users to add and remove the books from the cart and display the total price of items in the cart. And where users can enter their details and complete the purchase.
+Set up a database to store information about books, users, and orders. And Implement API endpoints to retrieve a list of featured books, book details, 
+and handle shopping cart interactions.
+When an order is confirmed, update the database for hide that purchased book in home page.
+ 
+f.  The footer section must include quick links, social media links, contact information, and copyright.
+ 
+Note: All of the pages should be visually appealing and functional.
+submit in 3 days

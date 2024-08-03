@@ -1,0 +1,34 @@
+
+{% extends 'store/layouts/main.html' %}
+
+{% block main %}
+
+<br><br><br>
+<div class="container">
+  {% include 'store/inc/message.html' %}
+</div>
+
+  <h2 class="container"><span class="material-symbols-outlined">
+    local_library
+    </span>Available Book's in the Store...</h2>
+    <div class="container">
+    <div class="row">
+      <!-- div.row -->
+      <!-- div.col-lg-4*3 -->
+ {% if book %}
+        {% for  i in book %}
+
+<div class="col lg 4" style="margin: 20px;">
+<div class="card" style="width: 18rem;">
+    <a href="{% url 'details' pk=i.id %}">   <img src="{{i.img.url}}" alt="book img" class="card-img-top" style="height:250px;" alt="bookimg"></a>
+    <div class="card-body" style="height:100px;">
+      <h5 class="card-title">Book Name:{{i.Book_name}} </h5>
+      <p class="card-text">Description:{{i.description | slice:":15"}}....</p>
+    </div>
+  </div>
+    </div>
+    {% endfor %}
+    {% endif %}
+    </div>
+    </div>
+{% endblock main %}

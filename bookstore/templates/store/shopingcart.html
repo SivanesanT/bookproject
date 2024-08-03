@@ -1,0 +1,37 @@
+{% extends 'store/layouts/main.html' %}
+
+{% block main %}
+
+<br><br><br>
+<div class="container">
+  {% include 'store/inc/message.html' %}
+</div>
+  <h2 class="container" style="color: blueviolet;"><span class="material-symbols-outlined">
+    domain_add
+    </span>Book Shopcart...</h2>
+    {% if total %}
+    <h4 class="container" style="color: green;">Total Cart Amount: {{total}} </h4>
+    {% endif %}
+    <div class="container">
+    <div class="row">
+{% if cart %}
+        {% for i in cart %}
+
+<div class="col lg 4" style="margin: 20px;">
+<div class="card" style="width: 18rem;">
+   <a href="{% url 'details' pk=i.book.id %}"> <img src="{{i.book.img.url}}" alt="book img" class="card-img-top" style="height:250px;" alt="bookimg"></a>
+    <div class="card-body" style="height:100px;">
+      <h6 class="card-title">Book Name:{{i.book.Book_name}} </h6>
+  <p class="card-text">Price:{{i.book.price}}
+     <a href="{% url 'placeorder' pk=i.id %}">
+      <button name="submit" type="submit" style="text-align: center;" class="btn btn-primary" onclick="return confirm('Are You Want to Order the Book: {{i.book.Book_name}}');">Order</button></a>
+        <a href="{% url 'remove' pk=i.id %}">
+      <button name="submit" type="submit" style="text-align: center;" class="btn btn-danger" onclick="return confirm('Are You Want to Remove Book:{{i.book.Book_name}} from Cart');">Remove</button></a></p>
+    </div>
+  </div>
+  </div>
+{% endfor %}
+{% endif %}
+  </div>
+    </div>
+{% endblock main %}
